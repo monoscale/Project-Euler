@@ -1,4 +1,4 @@
-$case = 600851475143; # Find largest prime factor for this number
+$case = 600_851_475_143; # Find largest prime factor for this number
 @primes = (); # Contains all the primes lower than $case
 @primes_correct = (); # Contains all the prime factors for $case
 $largest = 0; # The largest prime factor for $case
