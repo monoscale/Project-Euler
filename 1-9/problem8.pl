@@ -4,18 +4,13 @@ print_result($res);
 
 
 sub init_data {
+  my @number;
   while(<DATA>){
     chomp;
-    my @number;
-    push @row, $_;
-  }
-  my @number;
-  for $n (@row){
-    for $s (split(//, $n)){
+    for $s (split(//, $_)){
       push @number, $s;
     }
   }
-
   return @number
 }
 
@@ -41,8 +36,6 @@ sub print_result {
   $res = shift;
   print "The value of the greatest product made with thirteen adjacent digits is $res.\n";
 }
-
-
 
 __DATA__
 73167176531330624919225119674426574742355349194934
