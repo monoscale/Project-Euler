@@ -1,4 +1,62 @@
-@raw = qw(
+@grid = init_data(); # array of arrays
+$product = find_largest_product(\@grid);
+print_result($product);
+
+
+sub init_data {
+  my @rows;
+  my $i = 0;
+  while(<DATA>){
+    chomp;
+    for $r (split(" ", $_)){
+      push @{$rows[$i]}, $r;
+    }
+    $i++;
+  }
+  return @rows;
+}
+
+sub find_largest_product {
+  my @grid = @{$_[0]};
+  my $largest = 0; # Holds the largest product found
+  my $product = 0; # Temporary variable
+
+  for (my $i = 0; $i < 20; $i++){
+    for (my $j = 0; $j < 16; $j++){
+      # Searching right
+      $product = $grid[$i][$j] * $grid[$i][$j + 1] * $grid[$i][$j + 2] * $grid[$i][$j + 3];
+      $largest = $product if $product > $largest;
+      # Searching down
+      $product = $grid[$j][$i] * $grid[$j + 1][$i] * $grid[$j + 2][$i] * $grid[$j + 3][$i];
+      $largest = $product if $product > $largest;
+    }
+  }
+
+  for(my $i = 0; $i < 16; $i++){
+    for(my $j = 0; $j < 16; $j++){
+      # Searching right diagonally
+      $product = $grid[$i][$j] * $grid[$i + 1][$j + 1] * $grid[$i + 2][$j + 2] * $grid[$i + 3][$j + 3];
+      $largest = $product if $product > $largest;
+    }
+  }
+
+  for(my $i = 3; $i < 20; $i++){
+    for(my $j = 0; $j < 16; $j++){
+      # Searching left diagonally
+      $product = $grid[$i][$j] * $grid[$i - 1][$j + 1] * $grid[$i - 2][$j + 2] * $grid[$i - 3][$j + 3];
+      $largest = $product if $product > $largest;
+    }
+  }
+  return $largest;
+}
+
+sub print_result {
+  $res = shift;
+  print "The greatest product of four adjacent numbers is $res.\n";
+}
+
+
+__DATA__
 08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
 81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65
@@ -19,54 +77,3 @@
 20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16
 20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48
-);
-
-# Initializing
-%grid = ();
-$size = 20;
-
-$row = 0;
-for ($i = 1; $i <= scalar @raw; $i++){
-  push @{$grid{$row}}, @raw[$i - 1];
-  $row++ if $i % $size == 0;
-}
-
-# Calculating
-$result = 0;
-
-# For each row in the grid
-for $row (sort { $a <=> $b } keys %grid){
-  # For each number in a row
-  for ($i = 0; $i < $size; $i++){
-    search_right($row, $i);
-    search_down($row, $i);
-    search_diagonally($row, $i);
-  }
-}
-
-
-
-
-#DEBUG_PRINT();
-
-
-# No need for left and up since we will iterate over every element in the grid.
-sub search_right {
-  my $row = @_[0];
-  my $index = @_[1];
-}
-sub search_down {
-  my $row = @_[0];
-  my $index = @_[1];
-}
-sub search_diagonally {
-  my $row = @_[0];
-  my $index = @_[1];
-}
-
-sub DEBUG_PRINT {
-  for $row (sort { $a <=> $b } keys %grid){
-    print "$key => ";
-    print join " ", @{$grid{$row}}, "\n";
-  }
-}
