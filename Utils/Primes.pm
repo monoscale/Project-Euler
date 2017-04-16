@@ -1,5 +1,6 @@
-package Primes;
+# Package specialized in primes
 
+package Primes;
 
 # Gets the next prime in sequence according to the given argument.
 sub next_prime {
