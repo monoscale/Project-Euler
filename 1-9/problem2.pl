@@ -1,4 +1,5 @@
-
+use lib '../Utils';
+require Math;
 # Main
 @fib = init_data();
 $res = find_sum(\@fib);
@@ -6,18 +7,7 @@ print_result($res);
 
 # Initializes the data
 sub init_data {
-  my @fib = (1, 2); # The fibonacci sequence;
-  my $treshold = 4_000_000; # The fibonacci sequence cannot go higher than this number
-  my $value = 0; #
-  my $index = 0; #
-
-  while($value < $treshold){
-    $value = @fib[$index + 1] + @fib[$index];
-    push @fib, $value unless $value >= $treshold;
-    $index++;
-  }
-
-  return @fib;
+  return Math::fibonacci_limit(4_000_000);
 }
 
 # Finds the sum
