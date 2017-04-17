@@ -12,8 +12,8 @@ sub init_data {
 }
 
 sub find_count_letters {
-  my @range = 1..250;
-
+  my @range = 1..1000;
+  my $total = 0;
   for $i (@range){
     if($i =~ /^\d{1}$/){
       $written = single_digit($i);
@@ -30,8 +30,13 @@ sub find_count_letters {
     if($i =~ /^\d{3}$/){
       $written = three_digits($i);
     }
+    if($i =~ /^\d{4}$/){
+      $written = "one$thousand";
+    }
+    $total += length $written;
     print "$i -> $written\n";
   }
+  return $total;
 
   sub single_digit {
     my $n = shift;
@@ -55,21 +60,22 @@ sub find_count_letters {
   sub three_digits {
     my $n = shift;
     my $one = $n % 10;
-    my $tenth = (($n - $one) / 10) % 10;
-    my $hundredth = substr($n, 0, 1);
-
-    my $onewritten;
+    my $tenth = ($n) % 100;
+    my $hundredth = substr($n, 0 , 1);
     my $tenthwritten;
-    my $hundredthwritten;
-    if($tenth == 1){
-      $tenthwritten = @tenths[$tenth];
-    } else{
-      $onewritten = @ones[$one - 1];
-      $tenthwritten = @tenths2[$tenth - 2];
+    if($tenth >= 20){
+      $tenthwritten = "and".two_digits($tenth);
+    }elsif ($tenth >= 10){
+      $tenthwritten = "and".two_digits_special($tenth);
+    }else {
+      $tenthwritten = "and".single_digit($one) if $one != 0;
     }
-    $hundredthwritten = "@ones[$hundredth - 1] $hundred and";
+    $hundredthwritten = single_digit($hundredth) . "hundred";
 
-    return "$hundredthwritten $tenthwritten $onewritten";
+
+
+    return "$hundredthwritten$tenthwritten";
+
   }
 }
 
