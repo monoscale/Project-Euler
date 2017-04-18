@@ -1,6 +1,7 @@
+package problem6;
 
 # Main
-$res = calculate_difference();
+my $res = calculate_difference();
 print_result($res);
 
 # Calculates the difference between the square of the sum and sum of squares
@@ -32,6 +33,7 @@ sub square_of_sum {
 
 
 sub print_result {
-  $res = shift;
+  my $res = shift;
   print "The difference between the sum of the squares of the first one hundred natural numbers and the square of the sum is $res.\n";
+  return 1;
 }

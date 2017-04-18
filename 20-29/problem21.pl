@@ -1,4 +1,4 @@
-
+package problem21;
 # Main
 $res = find_sum_of_amicable_numbers();
 print_result($res);

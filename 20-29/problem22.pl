@@ -1,6 +1,6 @@
+package problem22;
 
 @names = init_data();
-
 $res = calculate_scores(\@names);
 print_result($res);
 

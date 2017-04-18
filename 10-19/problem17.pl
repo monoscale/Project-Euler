@@ -1,20 +1,20 @@
+package problem17;
 
-init_data();
-$res = find_count_letters();
+my @ones = qw(one two three four five six seven eight nine);
+my @tenths = qw(ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen);
+my @tenths2 = qw(twenty thirty forty fifty sixty seventy eighty ninety);
+my $hundred = "hundred";
+my $thousand = "thousand";
+my $res = find_count_letters();
 print_result($res);
 
-sub init_data {
-  @ones = qw(one two three four five six seven eight nine);
-  @tenths = qw(ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen);
-  @tenths2 = qw(twenty thirty forty fifty sixty seventy eighty ninety);
-  $hundred = "hundred";
-  $thousand = "thousand";
-}
+
 
 sub find_count_letters {
   my @range = 1..1000;
   my $total = 0;
-  for $i (@range){
+  my $written;
+  for my $i (@range){
     if($i =~ /^\d{1}$/){
       $written = single_digit($i);
     }
@@ -34,7 +34,6 @@ sub find_count_letters {
       $written = "one$thousand";
     }
     $total += length $written;
-    print "$i -> $written\n";
   }
   return $total;
 
@@ -70,7 +69,7 @@ sub find_count_letters {
     }else {
       $tenthwritten = "and".single_digit($one) if $one != 0;
     }
-    $hundredthwritten = single_digit($hundredth) . "hundred";
+    my $hundredthwritten = single_digit($hundredth) . "hundred";
 
 
 

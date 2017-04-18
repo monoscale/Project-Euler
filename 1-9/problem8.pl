@@ -1,5 +1,8 @@
-@number = init_data();
-$res = find_adjacents(\@number);
+package problem8;
+
+
+my @number = init_data();
+my $res = find_adjacents(\@number);
 print_result($res);
 
 
@@ -7,7 +10,7 @@ sub init_data {
   my @number;
   while(<DATA>){
     chomp;
-    for $s (split(//, $_)){
+    for my $s (split(//, $_)){
       push @number, $s;
     }
   }
@@ -19,9 +22,9 @@ sub find_adjacents {
   my @number = @{$_[0]};
   my $max_adjacents = 13;
   my $largest_product = 1;
-  for($i = 0; $i < (scalar @number) - $max_adjacents + 1; $i++){
+  for(my $i = 0; $i < (scalar @number) - $max_adjacents + 1; $i++){
     my $tempproduct = $number[$i];
-    for($j = 1; $j < $max_adjacents; $j++){
+    for(my $j = 1; $j < $max_adjacents; $j++){
       $tempproduct *= $number[$i + $j];
     }
 
@@ -33,8 +36,9 @@ sub find_adjacents {
 }
 
 sub print_result {
-  $res = shift;
+  my $res = shift;
   print "The value of the greatest product made with thirteen adjacent digits is $res.\n";
+  return 1;
 }
 
 __DATA__

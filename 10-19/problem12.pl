@@ -1,3 +1,5 @@
+package problem12;
+
 # Main
 $max_divisors = shift;
 

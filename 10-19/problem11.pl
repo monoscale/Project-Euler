@@ -1,5 +1,7 @@
-@grid = init_data(); # array of arrays
-$product = find_largest_product(\@grid);
+package problem11;
+
+my @grid = init_data(); # array of arrays
+my $product = find_largest_product(\@grid);
 print_result($product);
 
 
@@ -8,7 +10,7 @@ sub init_data {
   my $i = 0;
   while(<DATA>){
     chomp;
-    for $r (split(" ", $_)){
+    for my $r (split(" ", $_)){
       push @{$rows[$i]}, $r;
     }
     $i++;
@@ -51,8 +53,9 @@ sub find_largest_product {
 }
 
 sub print_result {
-  $res = shift;
+  my $res = shift;
   print "The greatest product of four adjacent numbers is $res.\n";
+  return 1;
 }
 
 

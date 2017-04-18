@@ -1,8 +1,10 @@
+package problem7;
+
 use lib "../Utils";
 require Primes;
 
 # Main
-$res = find_prime();
+my $res = find_prime();
 print_result($res);
 
 # Finds the 10 001st prime
@@ -11,10 +13,9 @@ sub find_prime {
   my $currentindex = 3;
   my %primes = ( 1 => 2, # The description is not zero based, so we don't do it as well
               2 => 3);
-  my $currentprime = 3;
 
-  for($currentindex; $currentindex <= $index; $currentindex++){
-    $nextprime = Primes::next_prime($currentprime);
+  for(my $currentprime = 3; $currentindex <= $index; $currentindex++){
+    my $nextprime = Primes::next_prime($currentprime);
     $primes{$currentindex} = $nextprime;
     $currentprime = $nextprime;
   }
@@ -26,4 +27,5 @@ sub find_prime {
 sub print_result{
   $res = shift;
   print "The 10 001st prime number is $res.\n";
+  return 1;
 }

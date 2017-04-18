@@ -1,15 +1,21 @@
-$sum = 0;
+package problem13;
+my $digits = find_digits();
+print_result($digits);
 
-while(<DATA>){
-  chomp;
-  $sum += $_;
-
+sub find_digits {
+  my $sum = 0;
+  while(<DATA>){
+    chomp;
+    $sum += $_;
+  }
+  return substr($sum, 0, 11);
 }
 
-print substr($sum, 0, 11);
-print "\n";
-
-
+sub print_result {
+  my $res = shift;
+  print "The first 10 digits are $res.\n";
+  return 1;
+}
 
 __DATA__
 37107287533902102798797998220837590246510135740250

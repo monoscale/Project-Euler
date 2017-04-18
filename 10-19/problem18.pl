@@ -1,4 +1,4 @@
-
+package problem18;
 #Main
 @triangle = init_data();
 $res = find_maximum(\@triangle);
