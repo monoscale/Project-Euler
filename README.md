@@ -18,10 +18,8 @@ Perl solutions for [Project Euler](https://projecteuler.net/)
 15. [Lattice paths](https://github.com/Lentosy/Project-Euler/blob/master/10-19/problem15.pl)
 16. [Power digit sum](https://github.com/Lentosy/Project-Euler/blob/master/10-19/problem16.pl)
 17. [Number letter counts](https://github.com/Lentosy/Project-Euler/blob/master/10-19/problem17.pl)
-18. Maximum path sum 1
-19. Counting Sundays
+18. [Maximum path sum 1](https://github.com/Lentosy/Project-Euler/blob/master/10-19/problem18.pl)
+19. [Counting Sundays](https://github.com/Lentosy/Project-Euler/blob/master/10-19/problem19.pl)
 20. [Factorial digit sum](https://github.com/Lentosy/Project-Euler/blob/master/20-29/problem20.pl)
 21. [Amicable numbers](https://github.com/Lentosy/Project-Euler/blob/master/20-29/problem21.pl)
 22. [Names scores](https://github.com/Lentosy/Project-Euler/blob/master/20-29/problem22.pl)
-
-
