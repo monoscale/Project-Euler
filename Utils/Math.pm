@@ -26,6 +26,15 @@ sub sum_of_digits {
   return $sod;
 }
 
+sub sum_of_proper_divisors {
+  my $n = shift;
+  my $sum = 0;
+  for(my $i = 1; $i <= ($n / 2); $i++){
+    $sum += $i if $n % $i == 0;
+  }
+  return $sum;
+}
+
 # Returns an array of the fibonacci sequence with the specified amount of terms
 sub fibonacci_terms {
   my $terms = shift;

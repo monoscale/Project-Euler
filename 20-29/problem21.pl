@@ -1,4 +1,6 @@
 package problem21;
+use lib "../Utils";
+require Math;
 # Main
 $res = find_sum_of_amicable_numbers();
 print_result($res);
@@ -9,8 +11,8 @@ sub find_sum_of_amicable_numbers {
   my $sum = 0;
   my @amicable_numbers = ();
   for(my $i = 1; $i < $max; $i++){
-    my $res = find_sum_of_proper_divisors($i);
-    if(find_sum_of_proper_divisors($res) == $i && $i != $res){
+    my $res = Math::sum_of_proper_divisors($i);
+    if(Math::sum_of_proper_divisors($res) == $i && $i != $res){
       push @amicable_numbers, $res, $i;
     }
   }
@@ -21,15 +23,6 @@ sub find_sum_of_amicable_numbers {
   grep { $sum += $_ } keys %amicable_no_duplicates;
   return $sum;
 
-  sub find_sum_of_proper_divisors {
-    my $n = shift;
-    my $sum = 0;
-    for(my $i = 1; $i <= ($n / 2); $i++){
-      $sum += $i if $n % $i == 0;
-    }
-    return $sum;
-
-  }
 }
 
 sub print_result {

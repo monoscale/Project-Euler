@@ -23,3 +23,5 @@ Perl solutions for [Project Euler](https://projecteuler.net/)
 20. [Factorial digit sum](https://github.com/Lentosy/Project-Euler/blob/master/20-29/problem20.pl)
 21. [Amicable numbers](https://github.com/Lentosy/Project-Euler/blob/master/20-29/problem21.pl)
 22. [Names scores](https://github.com/Lentosy/Project-Euler/blob/master/20-29/problem22.pl)
+23. Non-abundant sums
+24. [lexographicpermutations](https://github.com/Lentosy/Project-Euler/blob/master/20-29/problem24.pl)
