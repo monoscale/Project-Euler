@@ -1,6 +1,6 @@
 package problem10;
 use lib "../Utils";
-require Primes;
+require Math;
 
 my $sum = find_sum();
 print_result($sum);
@@ -12,7 +12,7 @@ sub find_sum{
   my $currentprime = 3;
 
   while($currentprime < $treshold){
-    my $nextprime = Primes::next_prime($currentprime);
+    my $nextprime = Math::next_prime($currentprime);
     $currentprime = $nextprime;
     push @primes, $currentprime;
   }
