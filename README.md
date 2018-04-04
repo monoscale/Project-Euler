@@ -12,7 +12,7 @@ Perl solutions for [Project Euler](https://projecteuler.net/)
 9. [Special Pythagorean triplet](https://github.com/Lentosy/Project-Euler/blob/master/1-9/problem9.pl)
 10. [Largest product in a grid](https://github.com/Lentosy/Project-Euler/blob/master/10-19/problem10.pl)
 11. [Summation of primes](https://github.com/Lentosy/Project-Euler/blob/master/10-19/problem11.pl)
-12. Highly divisible triangular number
+12. [Highly divisible triangular number](https://github.com/Lentosy/Project-Euler/blob/master/10-19/problem12.cpp)
 13. [Large sum](https://github.com/Lentosy/Project-Euler/blob/master/10-19/problem13.pl)
 14. [Longest Collatz sequence](https://github.com/Lentosy/Project-Euler/blob/master/10-19/problem14.pl)
 15. [Lattice paths](https://github.com/Lentosy/Project-Euler/blob/master/10-19/problem15.pl)
