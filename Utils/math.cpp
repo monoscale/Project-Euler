@@ -15,7 +15,20 @@ namespace math{
 		}
 		return true;
 	}	
+	
+	int power(int n, int x){
+		if(x == 0){
+			return 1;
+		}
+		int result = n;
+		while(x > 1){
+			result *= n;
+			x--;
+		}
+		return result;		
+	}
 }
+
 
 
 
