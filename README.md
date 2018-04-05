@@ -23,5 +23,12 @@ Perl solutions for [Project Euler](https://projecteuler.net/)
 20. [Factorial digit sum](https://github.com/Lentosy/Project-Euler/blob/master/20-29/problem20.pl)
 21. [Amicable numbers](https://github.com/Lentosy/Project-Euler/blob/master/20-29/problem21.pl)
 22. [Names scores](https://github.com/Lentosy/Project-Euler/blob/master/20-29/problem22.pl)
-23. Non-abundant sums
+23. [Non-abundant sums](https://github.com/Lentosy/Project-Euler/blob/master/20-29/problem23.cpp)
 24. [Lexographic Permutations](https://github.com/Lentosy/Project-Euler/blob/master/20-29/problem24.pl)
+25. 1000-digit Fibonacci number
+26. Reciprocal cycles
+27. [Quadratic primes](https://github.com/Lentosy/Project-Euler/blob/master/20-29/problem27.cpp)
+28. [Number spiral diagonals](https://github.com/Lentosy/Project-Euler/blob/master/20-29/problem28.cpp)
+29. Distinct powers
+30. [Digit fifth powers](https://github.com/Lentosy/Project-Euler/blob/master/30-39/problem30.cpp)
+31. [Coin sums](https://github.com/Lentosy/Project-Euler/blob/master/30-39/problem31.cpp)
