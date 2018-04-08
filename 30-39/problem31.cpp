@@ -29,4 +29,5 @@ int main(void){
 
 	std::cout << "There exists " << permutations << " ways to make 2 pounds by using any number of coins" << std::endl;
 	std::cout << "Found the answer in " << c.time() << " seconds" << std::endl;
+	return 0;
 }

@@ -11,4 +11,5 @@ int main(void){
 
 	
 	std::cout << "Found the answer in " << c.time() << " seconds" << std::endl;
+	return 0;
 }

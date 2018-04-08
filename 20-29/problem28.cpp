@@ -42,4 +42,5 @@ int main(void){
 	
 	std::cout << "The sum of the numbers on the diagonals in a " << dimension <<  " by " << dimension << " spiral is " << sum << std::endl;
 	std::cout << "Found the answer in " << c.time() << " seconds" << std::endl;
+	return 0;
 }

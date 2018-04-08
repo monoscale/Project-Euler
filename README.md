@@ -32,3 +32,6 @@ Perl solutions for [Project Euler](https://projecteuler.net/)
 29. Distinct powers
 30. [Digit fifth powers](https://github.com/Lentosy/Project-Euler/blob/master/30-39/problem30.cpp)
 31. [Coin sums](https://github.com/Lentosy/Project-Euler/blob/master/30-39/problem31.cpp)
+32. Pandigital products
+33. Digit cancelling fractions
+

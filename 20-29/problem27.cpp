@@ -52,4 +52,5 @@ int main(void){
 	std::cout << max_prime_count << " consecutive primes with a=" << max_a << " and b=" << max_b << std::endl;
 	std::cout << "The product of a and b is " << max_a * max_b << std::endl;
 	std::cout << "Found the answer in " << c.time() << " seconds" << std::endl;
+	return 0;
 }

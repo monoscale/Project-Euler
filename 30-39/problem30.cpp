@@ -28,4 +28,5 @@ int main(void){
 	
 	std::cout << "The sum of all the numbers that can be written as the sum of fifth powers of their digits is " << sum <<std::endl;
 	std::cout << "Found the answer in " << c.time() << " seconds" << std::endl;
+	return 0;
 }

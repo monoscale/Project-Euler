@@ -38,6 +38,7 @@ int main(void){
 	
 	std::cout << "The sum of all the positive integers which cannot be written as the sum of two abundant numbers is " << sum << std::endl;
 	std::cout << "Found the answer in " << c.time() << " seconds" << std::endl;
+	return 0;
 }
 
 bool is_abundant(int n){
