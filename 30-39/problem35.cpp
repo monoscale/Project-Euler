@@ -16,41 +16,23 @@ NOTE: 2, 3, 5, and 7 are not considered to be truncatable primes.
 #include "../Utils/iterators.cpp"
 
 
-bool is_truncatable_prime(int n){
-	// Left to right
-	for(int i = 10; i <= n; i *= 10){
-		if(!math::is_prime(n % i)){
-			return false;
-		}
-	}
-	
-	// Right to left	
-	while(n > 0){
-		if(!math::is_prime(n)){
-			return false;
-		}
-		n /= 10;
-	}
-	return true;
+bool is_circular_prime(int n){
+
 }
 
 int main(void){
 	Chrono c;
 	c.start();
 	
-	int sum = 0;
-	int primes = 0;
-	int n = 11;
-	while(primes < 11){
-		if(is_truncatable_prime(n)){
-			sum += n;
-			primes++;	
+	int count = 0;
+	for(int i = 2; i < 100; i++){
+		if(is_circular_prime(i)){
+			count++;
 		}
-		n++;
 	}
-	
+
 	c.stop();
-	std::cout << "The sum of the only eleven primes that are both truncatable from left to right and right to left is " << sum << std::endl;
+	std::cout << "There are " << count << " circular primes below one million" << std::endl;
 	std::cout << "Found the answer in " << c.time() << " seconds" << std::endl;
 	return 0;
 }
