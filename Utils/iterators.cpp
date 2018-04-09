@@ -6,6 +6,12 @@
 * Code to write out various STL containers
 */
 
+
+
+/*
+* Prints out a vector in the following format:
+*  [ 1 | 2 | 3 | ... | n ]
+*/
 template<typename T>
 std::ostream& operator<<(std::ostream& out, const std::vector<T> &v){
 	out << "[ ";
@@ -19,6 +25,10 @@ std::ostream& operator<<(std::ostream& out, const std::vector<T> &v){
 	return out;
 }
 
+/*
+* Prints out a set in the following format:
+*  { 1 , 2 , 3 , ... , n } 
+*/
 template<typename T>
 std::ostream& operator<<(std::ostream& out, const std::set<T> &s){
 	out << "{ ";
@@ -32,6 +42,11 @@ std::ostream& operator<<(std::ostream& out, const std::set<T> &s){
 	return out;
 }
 
+/*
+* Prints out a map in the following format
+* key1 -> value1\n
+* key2 -> value2\n
+*/
 template<typename T, typename K>
 std::ostream& operator<<(std::ostream& out, std::map<T, K> &m){
 	typename std::map<T, K>::const_iterator it = m.begin();
