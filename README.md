@@ -32,6 +32,23 @@ Perl solutions for [Project Euler](https://projecteuler.net/)
 29. Distinct powers
 30. [Digit fifth powers](https://github.com/Lentosy/Project-Euler/blob/master/30-39/problem30.cpp)
 31. [Coin sums](https://github.com/Lentosy/Project-Euler/blob/master/30-39/problem31.cpp)
-32. Pandigital products
+32. [Pandigital products](https://github.com/Lentosy/Project-Euler/blob/master/30-39/problem32.cpp)
 33. Digit cancelling fractions
+34. [Digit factorials](https://github.com/Lentosy/Project-Euler/blob/master/30-39/problem32.cpp)
+35. Circular primes
+36. Double-base palindromes
+37. [Truncatable primes](https://github.com/Lentosy/Project-Euler/blob/master/30-39/problem32.cpp)
+38. Pandigital multiples
+39. Integer right triangles
+40. Champernowne's constant
+41. Pandigital prime
+42. [Coded triangle numbers](https://github.com/Lentosy/Project-Euler/blob/master/40-49/problem42.cpp)
+43. Sub-string divisibility 
+44. Pentagon numbers
+45. Triangular, pentagonal and hexagonal
+46. Goldbach's other conjecture
+47. Distinct primes factors
+48. Self powers
+49. Prime permutations
+50. Consecutive prime sum
 
