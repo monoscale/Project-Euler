@@ -1,0 +1,42 @@
+/*
+
+The prime 41, can be written as the sum of six consecutive primes:
+41 = 2 + 3 + 5 + 7 + 11 + 13
+
+This is the longest sum of consecutive primes that adds to a prime below one-hundred.
+
+The longest sum of consecutive primes below one-thousand that adds to a prime, contains 21 terms, and is equal to 953.
+
+Which prime, below one-million, can be written as the sum of the most consecutive primes?
+*/
+#include <iostream>
+#include "../Utils/chrono.cpp"
+#include "../Utils/math.cpp"
+
+bool can_be_written_as_sum_of_consecutive_primes(int n){
+	int sum = 0;
+	int i = 2;
+	int terms = 0;
+	while(i <= n && sum < n){
+		if(math::is_prime(i)){
+			std::cout << i << std::endl;
+			sum += i;
+			terms++;
+		}
+		i++;
+	}
+	std::cout << "terms: " << terms << std::endl;
+	return sum == n;
+}
+
+int main(void){
+	Chrono c;
+	c.start();
+	
+	std::cout << can_be_written_as_sum_of_consecutive_primes(41);
+
+	c.stop();
+	std::cout << "Found the answer in " << c.time() << " seconds" << std::endl;
+	return 0;
+}
+
