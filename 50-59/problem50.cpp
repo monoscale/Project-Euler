@@ -12,20 +12,34 @@ Which prime, below one-million, can be written as the sum of the most consecutiv
 #include <iostream>
 #include "../Utils/chrono.cpp"
 #include "../Utils/math.cpp"
+#include "../Utils/iterators.cpp"
 
 bool can_be_written_as_sum_of_consecutive_primes(int n){
-	int sum = 0;
-	int i = 2;
-	int terms = 0;
-	while(i <= n && sum < n){
+	
+	std::vector<int> primes;
+	for(int i = 2; i < n; i++){
 		if(math::is_prime(i)){
-			std::cout << i << std::endl;
-			sum += i;
-			terms++;
+			primes.push_back(i);
 		}
-		i++;
 	}
-	std::cout << "terms: " << terms << std::endl;
+	std::cout << primes;
+	
+	int sum = 0;
+	int i = 0;
+	while(i < primes.size() && sum < n){
+		std::cout << "Currently adding " << primes[i] << std::endl;
+		sum += primes[i];
+		
+		
+		
+		i++;
+	}	
+
+	
+	
+
+
+	std::cout << sum << std::endl;
 	return sum == n;
 }
 
@@ -33,7 +47,7 @@ int main(void){
 	Chrono c;
 	c.start();
 	
-	std::cout << can_be_written_as_sum_of_consecutive_primes(41);
+	std::cout << can_be_written_as_sum_of_consecutive_primes(41) << std::endl;
 
 	c.stop();
 	std::cout << "Found the answer in " << c.time() << " seconds" << std::endl;

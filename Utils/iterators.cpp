@@ -13,7 +13,7 @@
 *  [ 1 | 2 | 3 | ... | n ]
 */
 template<typename T>
-std::ostream& operator<<(std::ostream& out, const std::vector<T> &v){
+std::ostream& operator<<(std::ostream& out, const std::vector<T> & v){
 	out << "[ ";
 	typename std::vector<T>::const_iterator it = v.begin();
 	out << *it++;
@@ -30,7 +30,7 @@ std::ostream& operator<<(std::ostream& out, const std::vector<T> &v){
 *  { 1 , 2 , 3 , ... , n } 
 */
 template<typename T>
-std::ostream& operator<<(std::ostream& out, const std::set<T> &s){
+std::ostream& operator<<(std::ostream& out, const std::set<T> & s){
 	out << "{ ";
 	typename std::set<T>::const_iterator it = s.begin();
 	out << *it++;
@@ -48,7 +48,7 @@ std::ostream& operator<<(std::ostream& out, const std::set<T> &s){
 * key2 -> value2\n
 */
 template<typename T, typename K>
-std::ostream& operator<<(std::ostream& out, std::map<T, K> &m){
+std::ostream& operator<<(std::ostream& out, std::map<T, K> & m){
 	typename std::map<T, K>::const_iterator it = m.begin();
 	while(it != m.end()){
 		out << it->first;
