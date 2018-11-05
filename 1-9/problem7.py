@@ -15,9 +15,3 @@ while(total_primes <= 10000):
     current_num = current_num + 1
 
 print(current_num)
-
-
-
-
-
-

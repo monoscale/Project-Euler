@@ -4,6 +4,7 @@ package problem4;
 my $largest = find_max_palindrome();
 print_result($largest);
 
+
 # Finds the largest palindrome that can be made with two 2-digit numbers
 sub find_max_palindrome {
   my $max = 1000; # Each number of the product can not go higher than this number

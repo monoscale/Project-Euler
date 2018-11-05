@@ -34,11 +34,6 @@ bool can_be_written_as_sum_of_consecutive_primes(int n){
 		
 		i++;
 	}	
-
-	
-	
-
-
 	std::cout << sum << std::endl;
 	return sum == n;
 }
